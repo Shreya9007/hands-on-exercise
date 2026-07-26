@@ -12,3 +12,11 @@
 .vscode/
 *.classpath
 *.project
+
+
+
+# Build folders
+**/target/
+
+# Generated application files
+bloggerapp/
