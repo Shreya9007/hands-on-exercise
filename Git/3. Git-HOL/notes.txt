@@ -1,0 +1,5 @@
+Git Hands-on 3
+Initial content in master branch.
+
+
+This line was added in GitNewBranch.
