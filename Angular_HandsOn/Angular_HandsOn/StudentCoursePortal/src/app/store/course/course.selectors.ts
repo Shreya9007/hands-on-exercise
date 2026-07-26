@@ -1,0 +1,23 @@
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { CourseState } from './course.reducer';
+
+/**
+ * Hands-On 9 Task 1 Step 95: NgRx Selectors with Memoisation
+ * Selectors are memoised — they only recompute when their input selectors change.
+ */
+export const selectCourseState = createFeatureSelector<CourseState>('course');
+
+export const selectAllCourses = createSelector(
+  selectCourseState,
+  (state: CourseState) => state ? state.courses : []
+);
+
+export const selectCoursesLoading = createSelector(
+  selectCourseState,
+  (state: CourseState) => state ? state.loading : false
+);
+
+export const selectCoursesError = createSelector(
+  selectCourseState,
+  (state: CourseState) => state ? state.error : null
+);

@@ -1,0 +1,53 @@
+<div class="home-page-container">
+  <div class="hero-section">
+    <!-- Hands-On 2 Step 11: String Interpolation -->
+    <h1 class="hero-title">Welcome to {{ portalName }}</h1>
+    <p class="hero-description">
+      Empowering students with seamless course navigation, enrollment tracking, live academic statistics, and state management.
+    </p>
+
+    <!-- Hands-On 2 Step 12 & 13: Property Binding [disabled] & Event Binding (click) -->
+    <div class="hero-actions">
+      <button class="btn-primary" [disabled]="!isPortalActive" (click)="onEnrollClick()">
+        Enroll Now
+      </button>
+      <span *ngIf="message" class="message-badge">{{ message }}</span>
+    </div>
+
+    <!-- Hands-On 2 Step 14: Two-Way Binding [(ngModel)] -->
+    <div class="search-box-container">
+      <label for="homeSearch">Quick Search Portal:</label>
+      <input
+        id="homeSearch"
+        type="text"
+        class="search-input"
+        placeholder="Type to search..."
+        [(ngModel)]="searchTerm"
+      />
+      <p class="search-preview" *ngIf="searchTerm">
+        Searching for: <strong>{{ searchTerm }}</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Hands-On 1 Task 2 Step 8 & Hands-On 6 Step 61: Stats Row -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-number">{{ availableCoursesCount }}</span>
+      <span class="stat-label">Courses Available</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">{{ enrolledCount }}</span>
+      <span class="stat-label">Enrolled</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">{{ gpa }}</span>
+      <span class="stat-label">GPA</span>
+    </div>
+  </div>
+
+  <div class="widgets-grid">
+    <app-course-summary-widget></app-course-summary-widget>
+    <app-notification></app-notification>
+  </div>
+</div>

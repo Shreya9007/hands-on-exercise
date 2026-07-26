@@ -1,0 +1,78 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Data Structures & Algorithms",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "passed",
+      "enrolled": true
+    },
+    {
+      "id": 2,
+      "name": "Web Development with Angular",
+      "code": "CS202",
+      "credits": 3,
+      "gradeStatus": "passed",
+      "enrolled": true
+    },
+    {
+      "id": 3,
+      "name": "Database Management Systems",
+      "code": "CS303",
+      "credits": 4,
+      "gradeStatus": "pending",
+      "enrolled": false
+    },
+    {
+      "id": 4,
+      "name": "Operating Systems & Linux",
+      "code": "CS404",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "enrolled": false
+    },
+    {
+      "id": 5,
+      "name": "Software Engineering Principles",
+      "code": "CS505",
+      "credits": 2,
+      "gradeStatus": "failed",
+      "enrolled": false
+    }
+  ],
+  "students": [
+    {
+      "id": 101,
+      "name": "Alex Johnson",
+      "email": "alex.johnson@student.edu",
+      "enrolledCourseIds": [1, 2],
+      "gpa": 3.8
+    },
+    {
+      "id": 102,
+      "name": "Samantha Reed",
+      "email": "samantha.reed@student.edu",
+      "enrolledCourseIds": [1, 3],
+      "gpa": 3.6
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentName": "Alex Johnson",
+      "studentEmail": "alex@example.com",
+      "courseId": 1,
+      "preferredSemester": "Odd",
+      "agreeToTerms": true
+    },
+    {
+      "id": 2,
+      "studentName": "Samantha Reed",
+      "studentEmail": "samantha@example.com",
+      "courseId": 2,
+      "preferredSemester": "Even",
+      "agreeToTerms": true
+    }
+  ]
+}
